@@ -3,7 +3,7 @@ import { LuMessageCirclePlus } from 'react-icons/lu'
 import SidebarChat from './SidebarChat'
 import { ShowSidebarContext } from '../../../context/ShowSidebarProvider'
 import { ChatHistoryContext } from '../../../context/ChatHistoryProvider'
-import { body } from "../../../assets/icons/body.png"
+import body from "../../../assets/icons/body.png"
 
 function Sidebar() {
 

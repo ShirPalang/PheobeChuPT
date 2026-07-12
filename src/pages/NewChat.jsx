@@ -1,5 +1,5 @@
 import Input from "../components/common/Input";
-import { head } from "../assets/icons/head.png"
+import head from "../assets/icons/head.png"
 
 function NewChat() {
   return (
