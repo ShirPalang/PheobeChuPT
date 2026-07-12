@@ -10,7 +10,10 @@ const router = createBrowserRouter([
       { path: 'chat/:id', element: <ChatPage /> },
     ]
   }
-])
+], {
+  basename: "/PheobeChuPT",
+}
+)
 
 
 export default router

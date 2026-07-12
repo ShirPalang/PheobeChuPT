@@ -3,6 +3,7 @@ import { LuMessageCirclePlus } from 'react-icons/lu'
 import SidebarChat from './SidebarChat'
 import { ShowSidebarContext } from '../../../context/ShowSidebarProvider'
 import { ChatHistoryContext } from '../../../context/ChatHistoryProvider'
+import { body } from "../../../assets/icons/body.png"
 
 function Sidebar() {
 
@@ -20,7 +21,7 @@ function Sidebar() {
       >
         {/* history header */}
         <div className='flex items-center gap-2'>
-          <img src="/src/assets/icons/body.png" alt=""
+          <img src={body} alt="pheobe chupi"
             className='w-10 h-10' />
           <h1 className='text-xl font-semibold text-sky-500'>PheobeChuPT</h1>
         </div>
@@ -35,7 +36,7 @@ function Sidebar() {
         <div className='h-fit overflow-x-hidden'>
           {
             [...history].reverse().map(chat => (
-              <SidebarChat key={chat.id} title={chat.chat[0].message} id={chat.id}/>
+              <SidebarChat key={chat.id} title={chat.chat[0].message} id={chat.id} />
             ))
           }
         </div>
