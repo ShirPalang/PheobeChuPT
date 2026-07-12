@@ -1,16 +1,32 @@
-# React + Vite
+# Pheobe ChuPT
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Preview](/public/img/banner.jpg)
 
-Currently, two official plugins are available:
+**Pheobe ChuPT is the best AI in the world!**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Send your questions to Pheobe ChuPT and get your answers in no time.
 
-## React Compiler
+<hr>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features:
 
-## Expanding the Oxlint configuration
+- Receive questions in the shortest possible time
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Send answers without a moment's delay
+
+- Not even a single mistake
+
+- Very cool
+
+- Very very cool
+
+- Very very very cool
+
+<hr>
+
+## 🛠️ Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Context API](https://img.shields.io/badge/Context_API-61DAFB?style=for-the-badge&logo=react&logoColor=white)
