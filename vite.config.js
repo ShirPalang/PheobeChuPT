@@ -10,5 +10,5 @@ export default defineConfig({
     presets: [reactCompilerPreset()]
   }),
   tailwindcss(),],
-  base: "/PheobeChuPT"
+  base: "/PheobeChuPT/"
 })
