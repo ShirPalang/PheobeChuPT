@@ -24,14 +24,18 @@ function ChatPage() {
   return (
     <div className='relative h-fit overflow-hidden lg:float-right lg:w-9/12'>
       <div className="h-12"></div>
-      {
-        findChat.chat.map((message) => (
-          <>
-            {
-              message?.type === 'user' ? <Message message={message.message} /> : <Result message={message.message} />
-            }
-          </>
-        ))
+      {<>
+        {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /> */}
+        {
+          findChat.chat.map((message) => (
+            <>
+              {
+                message?.type === 'user' ? <Message message={message.message} /> : <Result message={message.message} />
+              }
+            </>
+          ))
+        }
+      </>
       }
       <div ref={bottomRef}></div>
 
