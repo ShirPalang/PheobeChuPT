@@ -21,11 +21,42 @@ function Input() {
 
     if (id) {
       const findChat = history.findIndex(chat => chat.id == +id)
-      const newChat = [...history[findChat].chat, { type: 'user', message: prompt }, { type: 'bot', message: pheobeChupiGenerator(Math.floor(Math.random() * 20)) }]
-      history[findChat].chat = newChat
+      // { type: 'bot', message: pheobeChupiGenerator(Math.floor(Math.random() * 20)) }
+      // const newChat = [...history[findChat].chat, { type: 'user', message: prompt }, { type: 'bot', message: pheobeChupiGenerator(Math.floor(Math.random() * 20)) }]
+      const newChat = [...history[findChat].chat,
+      { type: 'user', message: prompt },
+      { type: 'thinking' }]
 
-      newData(history)
+      const updatedHistory = [...history];
+
+      updatedHistory[findChat] = {
+        ...updatedHistory[findChat],
+        chat: newChat,
+      };
+
+      newData(updatedHistory);
       setPropmt('')
+
+      setTimeout(() => {
+        const chatWithoutThinking = updatedHistory[findChat].chat.filter(
+          message => message.type !== 'thinking'
+        )
+
+        chatWithoutThinking.push({
+          type: 'bot',
+          message: pheobeChupiGenerator(Math.floor(Math.random() * 20))
+        })
+
+        const finalHistory = [...updatedHistory]
+
+        finalHistory[findChat] = {
+          ...finalHistory[findChat],
+          chat: chatWithoutThinking
+        }
+
+        newData(finalHistory)
+
+      }, 1000);
       return
     }
 

@@ -4,6 +4,7 @@ import Message from '../components/common/Message'
 import Result from '../components/common/Result'
 import { ChatHistoryContext } from '../context/ChatHistoryProvider'
 import { useParams } from 'react-router'
+import Thinking from '../components/common/Thinking'
 
 function ChatPage() {
 
@@ -24,18 +25,18 @@ function ChatPage() {
   return (
     <div className='relative h-fit overflow-hidden lg:float-right lg:w-9/12'>
       <div className="h-12"></div>
-      {<>
-        {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /> */}
-        {
-          findChat.chat.map((message) => (
-            <>
-              {
-                message?.type === 'user' ? <Message message={message.message} /> : <Result message={message.message} />
-              }
-            </>
-          ))
-        }
-      </>
+      {
+        findChat.chat.map((message) => {
+
+          if (message.type === "user")
+            return <Message message={message.message} />
+
+          if (message.type === "bot")
+            return <Result message={message.message} />
+
+          if (message.type === "thinking")
+            return <Thinking />
+        })
       }
       <div ref={bottomRef}></div>
 
